@@ -15,7 +15,7 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     var super_view:UIView!;
     let margin:CGFloat = 80.0;
     var table_view:UITableView!;
-    var media_collection:MPMediaItemCollection!;
+    var media_items:[MPMediaItem]!;
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -33,7 +33,13 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        // get song title 
+        let this_song = media_items![indexPath.row].title;
+
         let cell = UITableViewCell();
+        cell.textLabel?.textColor = UIColor.whiteColor();
+        cell.textLabel?.text = this_song;
         if((indexPath.row % 2) == 0)
         {
             cell.backgroundColor = DARK_GRAY;
@@ -46,11 +52,8 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //https://stackoverflow.com/questions/29138285/ios-swift-how-to-access-all-music-file-in-directory
-        let media_items = MPMediaQuery.songsQuery().items;
-        media_collection = MPMediaItemCollection(items: media_items!);
-        print(media_collection.count);
-        return media_collection.count;
+         media_items = MPMediaQuery.songsQuery().items;
+        return media_items!.count;
     }
     
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
