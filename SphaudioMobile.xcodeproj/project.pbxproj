@@ -15,6 +15,10 @@
 		462671D31BF7ACA700468BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462671D11BF7ACA700468BD2 /* LaunchScreen.storyboard */; };
 		462671DE1BF7ACA800468BD2 /* SphaudioMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671DD1BF7ACA800468BD2 /* SphaudioMobileTests.swift */; };
 		462671E91BF7ACA800468BD2 /* SphaudioMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671E81BF7ACA800468BD2 /* SphaudioMobileUITests.swift */; };
+		462671FA1BF7AD1600468BD2 /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F61BF7AD1600468BD2 /* NextButton.swift */; };
+		462671FB1BF7AD1600468BD2 /* PrevButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F71BF7AD1600468BD2 /* PrevButton.swift */; };
+		462671FC1BF7AD1600468BD2 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F81BF7AD1600468BD2 /* PlayButton.swift */; };
+		462671FD1BF7AD1600468BD2 /* AudioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F91BF7AD1600468BD2 /* AudioButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		462671E41BF7ACA800468BD2 /* SphaudioMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SphaudioMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		462671E81BF7ACA800468BD2 /* SphaudioMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphaudioMobileUITests.swift; sourceTree = "<group>"; };
 		462671EA1BF7ACA800468BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462671F61BF7AD1600468BD2 /* NextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
+		462671F71BF7AD1600468BD2 /* PrevButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrevButton.swift; sourceTree = "<group>"; };
+		462671F81BF7AD1600468BD2 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
+		462671F91BF7AD1600468BD2 /* AudioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				462671C51BF7ACA700468BD2 /* AppDelegate.swift */,
+				462671FE1BF7AD4200468BD2 /* AudioButtons */,
 				462671C71BF7ACA700468BD2 /* ViewController.swift */,
 				462671C91BF7ACA700468BD2 /* Main.storyboard */,
 				462671CF1BF7ACA700468BD2 /* Assets.xcassets */,
@@ -126,6 +135,17 @@
 				462671EA1BF7ACA800468BD2 /* Info.plist */,
 			);
 			path = SphaudioMobileUITests;
+			sourceTree = "<group>";
+		};
+		462671FE1BF7AD4200468BD2 /* AudioButtons */ = {
+			isa = PBXGroup;
+			children = (
+				462671F61BF7AD1600468BD2 /* NextButton.swift */,
+				462671F71BF7AD1600468BD2 /* PrevButton.swift */,
+				462671F81BF7AD1600468BD2 /* PlayButton.swift */,
+				462671F91BF7AD1600468BD2 /* AudioButton.swift */,
+			);
+			name = AudioButtons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,7 +281,11 @@
 			files = (
 				462671C81BF7ACA700468BD2 /* ViewController.swift in Sources */,
 				462671C61BF7ACA700468BD2 /* AppDelegate.swift in Sources */,
+				462671FA1BF7AD1600468BD2 /* NextButton.swift in Sources */,
+				462671FB1BF7AD1600468BD2 /* PrevButton.swift in Sources */,
 				462671CE1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld in Sources */,
+				462671FC1BF7AD1600468BD2 /* PlayButton.swift in Sources */,
+				462671FD1BF7AD1600468BD2 /* AudioButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
