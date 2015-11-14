@@ -21,6 +21,8 @@ var num_cols = 5;
 var play_button:PlayButton!;
 var prev_button:PrevButton!;
 var next_button:NextButton!;
+var song_label:UILabel!;
+var artist_label:UILabel!;
 
 class MainController: UIViewController {
     
@@ -139,7 +141,7 @@ class MainController: UIViewController {
         rise_button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
         rise_button.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Highlighted);
         rise_button.layer.cornerRadius = rise_button.frame.width * 0.025;
-        super_view.addSubview(rise_button);
+        //super_view.addSubview(rise_button);
         
         // fall button efficiency test
         fall_button = UIButton(frame: CGRect(x: rise_button.frame.maxX + margin, y: margin, width: width, height: height));
@@ -149,7 +151,7 @@ class MainController: UIViewController {
         fall_button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal);
         fall_button.setTitleColor(UIColor.lightGrayColor(), forState: UIControlState.Highlighted);
         fall_button.layer.cornerRadius = fall_button.frame.width * 0.025;
-        super_view.addSubview(fall_button);
+        //super_view.addSubview(fall_button);
         
         // configure audio buttons
         let play_dim = super_view.frame.width * 0.075;
@@ -171,6 +173,28 @@ class MainController: UIViewController {
         let next_offset_y = super_view.frame.height * 0.705;
         next_button = NextButton(frame: CGRect(x: next_offset_x, y: next_offset_y, width: next_dim, height: next_dim));
         super_view.addSubview(next_button);
+        
+        // song label
+        song_label = UILabel(frame: CGRect(x: 0.0, y: super_view.bounds.height * 0.2, width: super_view.bounds.width, height: 40.0));
+        song_label.text = "The Vallkyrie: Ride of the Vallkyries";
+        song_label.textAlignment = NSTextAlignment.Center;
+        song_label.textColor = UIColor.whiteColor();
+        song_label.font = UIFont.boldSystemFontOfSize(18.0);
+        super_view.addSubview(song_label);
+        
+        // artist label
+        artist_label = UILabel(frame: CGRect(x: 0.0, y: (super_view.bounds.height * 0.2) + 30.0, width: super_view.bounds.width, height: 40.0));
+        artist_label.text = "Richard Wagner";
+        artist_label.textAlignment = NSTextAlignment.Center;
+        artist_label.textColor = UIColor.whiteColor();
+        super_view.addSubview(artist_label);
+        
+        // hamburger button
+        let ham_dim:CGFloat = super_view.bounds.width * 0.1;
+        let ham_margin:CGFloat = 10.0;
+        let ham_button = HamburgerButton(frame: CGRect(x: ham_margin, y: ham_margin, width: ham_dim, height: ham_dim));
+        super_view.addSubview(ham_button);
+        
     }
     
     override func didReceiveMemoryWarning() {

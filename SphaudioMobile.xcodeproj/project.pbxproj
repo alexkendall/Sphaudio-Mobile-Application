@@ -19,6 +19,7 @@
 		462671FB1BF7AD1600468BD2 /* PrevButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F71BF7AD1600468BD2 /* PrevButton.swift */; };
 		462671FC1BF7AD1600468BD2 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F81BF7AD1600468BD2 /* PlayButton.swift */; };
 		462671FD1BF7AD1600468BD2 /* AudioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F91BF7AD1600468BD2 /* AudioButton.swift */; };
+		462672001BF7B6E100468BD2 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		462671F71BF7AD1600468BD2 /* PrevButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrevButton.swift; sourceTree = "<group>"; };
 		462671F81BF7AD1600468BD2 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		462671F91BF7AD1600468BD2 /* AudioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioButton.swift; sourceTree = "<group>"; };
+		462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				462671F71BF7AD1600468BD2 /* PrevButton.swift */,
 				462671F81BF7AD1600468BD2 /* PlayButton.swift */,
 				462671F91BF7AD1600468BD2 /* AudioButton.swift */,
+				462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */,
 			);
 			name = AudioButtons;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				462671C81BF7ACA700468BD2 /* ViewController.swift in Sources */,
+				462672001BF7B6E100468BD2 /* HamburgerButton.swift in Sources */,
 				462671C61BF7ACA700468BD2 /* AppDelegate.swift in Sources */,
 				462671FA1BF7AD1600468BD2 /* NextButton.swift in Sources */,
 				462671FB1BF7AD1600468BD2 /* PrevButton.swift in Sources */,
@@ -512,6 +516,7 @@
 				462671EF1BF7ACA800468BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462671F01BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobileTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +525,7 @@
 				462671F21BF7ACA800468BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		462671F31BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobileUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +534,7 @@
 				462671F51BF7ACA800468BD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
