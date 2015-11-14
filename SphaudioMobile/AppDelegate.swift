@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 let main_controller = MainController();
-
+let song_controller = SongController();
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     

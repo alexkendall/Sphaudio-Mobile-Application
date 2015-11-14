@@ -20,6 +20,8 @@
 		462671FC1BF7AD1600468BD2 /* PlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F81BF7AD1600468BD2 /* PlayButton.swift */; };
 		462671FD1BF7AD1600468BD2 /* AudioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671F91BF7AD1600468BD2 /* AudioButton.swift */; };
 		462672001BF7B6E100468BD2 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */; };
+		462672021BF7BA9800468BD2 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462672011BF7BA9800468BD2 /* SongController.swift */; };
+		462672051BF7C84800468BD2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462672041BF7C84800468BD2 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		462671F81BF7AD1600468BD2 /* PlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayButton.swift; sourceTree = "<group>"; };
 		462671F91BF7AD1600468BD2 /* AudioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioButton.swift; sourceTree = "<group>"; };
 		462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
+		462672011BF7BA9800468BD2 /* SongController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
+		462672041BF7C84800468BD2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,6 @@
 			children = (
 				462671C51BF7ACA700468BD2 /* AppDelegate.swift */,
 				462671FE1BF7AD4200468BD2 /* AudioButtons */,
-				462671C71BF7ACA700468BD2 /* ViewController.swift */,
 				462671C91BF7ACA700468BD2 /* Main.storyboard */,
 				462671CF1BF7ACA700468BD2 /* Assets.xcassets */,
 				462671D11BF7ACA700468BD2 /* LaunchScreen.storyboard */,
@@ -147,8 +150,19 @@
 				462671F81BF7AD1600468BD2 /* PlayButton.swift */,
 				462671F91BF7AD1600468BD2 /* AudioButton.swift */,
 				462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */,
+				462672041BF7C84800468BD2 /* Color.swift */,
+				462672031BF7BAB000468BD2 /* ViewControllers */,
 			);
 			name = AudioButtons;
+			sourceTree = "<group>";
+		};
+		462672031BF7BAB000468BD2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				462671C71BF7ACA700468BD2 /* ViewController.swift */,
+				462672011BF7BA9800468BD2 /* SongController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,8 +296,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				462672021BF7BA9800468BD2 /* SongController.swift in Sources */,
 				462671C81BF7ACA700468BD2 /* ViewController.swift in Sources */,
 				462672001BF7B6E100468BD2 /* HamburgerButton.swift in Sources */,
+				462672051BF7C84800468BD2 /* Color.swift in Sources */,
 				462671C61BF7ACA700468BD2 /* AppDelegate.swift in Sources */,
 				462671FA1BF7AD1600468BD2 /* NextButton.swift in Sources */,
 				462671FB1BF7AD1600468BD2 /* PrevButton.swift in Sources */,

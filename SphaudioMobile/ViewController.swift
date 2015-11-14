@@ -23,6 +23,8 @@ var prev_button:PrevButton!;
 var next_button:NextButton!;
 var song_label:UILabel!;
 var artist_label:UILabel!;
+var in_main:Bool = true;
+
 
 class MainController: UIViewController {
     
@@ -190,10 +192,11 @@ class MainController: UIViewController {
         super_view.addSubview(artist_label);
         
         // hamburger button
-        let ham_dim:CGFloat = super_view.bounds.width * 0.1;
-        let ham_margin:CGFloat = 10.0;
+        let ham_dim:CGFloat = super_view.bounds.width * 0.12;
+        let ham_margin:CGFloat = 20.0;
         let ham_button = HamburgerButton(frame: CGRect(x: ham_margin, y: ham_margin, width: ham_dim, height: ham_dim));
         super_view.addSubview(ham_button);
+        ham_button.addTarget(self, action: "switch_controller", forControlEvents: UIControlEvents.TouchUpInside);
         
     }
     
@@ -238,6 +241,20 @@ class MainController: UIViewController {
     func prev()
     {
         print("playing previous song");
+    }
+    
+    func switch_controller()
+    {
+        if(in_main)
+        {
+            self.view.addSubview(song_controller.view);
+            in_main = false;
+        }
+        else
+        {
+            song_controller.view.removeFromSuperview();
+            in_main = true;
+        }
     }
     
 }
