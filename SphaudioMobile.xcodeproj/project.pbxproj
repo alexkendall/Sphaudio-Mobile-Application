@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		462671C61BF7ACA700468BD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671C51BF7ACA700468BD2 /* AppDelegate.swift */; };
+		462671C81BF7ACA700468BD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671C71BF7ACA700468BD2 /* ViewController.swift */; };
+		462671CB1BF7ACA700468BD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462671C91BF7ACA700468BD2 /* Main.storyboard */; };
+		462671CE1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 462671CC1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld */; };
+		462671D01BF7ACA700468BD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 462671CF1BF7ACA700468BD2 /* Assets.xcassets */; };
+		462671D31BF7ACA700468BD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 462671D11BF7ACA700468BD2 /* LaunchScreen.storyboard */; };
+		462671DE1BF7ACA800468BD2 /* SphaudioMobileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671DD1BF7ACA800468BD2 /* SphaudioMobileTests.swift */; };
+		462671E91BF7ACA800468BD2 /* SphaudioMobileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671E81BF7ACA800468BD2 /* SphaudioMobileUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		462671DA1BF7ACA800468BD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462671BA1BF7ACA700468BD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462671C11BF7ACA700468BD2;
+			remoteInfo = SphaudioMobile;
+		};
+		462671E51BF7ACA800468BD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 462671BA1BF7ACA700468BD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 462671C11BF7ACA700468BD2;
+			remoteInfo = SphaudioMobile;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		462671C21BF7ACA700468BD2 /* SphaudioMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SphaudioMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		462671C51BF7ACA700468BD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		462671C71BF7ACA700468BD2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		462671CA1BF7ACA700468BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		462671CD1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SphaudioMobile.xcdatamodel; sourceTree = "<group>"; };
+		462671CF1BF7ACA700468BD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		462671D21BF7ACA700468BD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		462671D41BF7ACA700468BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462671D91BF7ACA800468BD2 /* SphaudioMobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SphaudioMobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		462671DD1BF7ACA800468BD2 /* SphaudioMobileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphaudioMobileTests.swift; sourceTree = "<group>"; };
+		462671DF1BF7ACA800468BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		462671E41BF7ACA800468BD2 /* SphaudioMobileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SphaudioMobileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		462671E81BF7ACA800468BD2 /* SphaudioMobileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphaudioMobileUITests.swift; sourceTree = "<group>"; };
+		462671EA1BF7ACA800468BD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		462671BF1BF7ACA700468BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462671D61BF7ACA800468BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462671E11BF7ACA800468BD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		462671B91BF7ACA700468BD2 = {
+			isa = PBXGroup;
+			children = (
+				462671C41BF7ACA700468BD2 /* SphaudioMobile */,
+				462671DC1BF7ACA800468BD2 /* SphaudioMobileTests */,
+				462671E71BF7ACA800468BD2 /* SphaudioMobileUITests */,
+				462671C31BF7ACA700468BD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		462671C31BF7ACA700468BD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				462671C21BF7ACA700468BD2 /* SphaudioMobile.app */,
+				462671D91BF7ACA800468BD2 /* SphaudioMobileTests.xctest */,
+				462671E41BF7ACA800468BD2 /* SphaudioMobileUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		462671C41BF7ACA700468BD2 /* SphaudioMobile */ = {
+			isa = PBXGroup;
+			children = (
+				462671C51BF7ACA700468BD2 /* AppDelegate.swift */,
+				462671C71BF7ACA700468BD2 /* ViewController.swift */,
+				462671C91BF7ACA700468BD2 /* Main.storyboard */,
+				462671CF1BF7ACA700468BD2 /* Assets.xcassets */,
+				462671D11BF7ACA700468BD2 /* LaunchScreen.storyboard */,
+				462671D41BF7ACA700468BD2 /* Info.plist */,
+				462671CC1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld */,
+			);
+			path = SphaudioMobile;
+			sourceTree = "<group>";
+		};
+		462671DC1BF7ACA800468BD2 /* SphaudioMobileTests */ = {
+			isa = PBXGroup;
+			children = (
+				462671DD1BF7ACA800468BD2 /* SphaudioMobileTests.swift */,
+				462671DF1BF7ACA800468BD2 /* Info.plist */,
+			);
+			path = SphaudioMobileTests;
+			sourceTree = "<group>";
+		};
+		462671E71BF7ACA800468BD2 /* SphaudioMobileUITests */ = {
+			isa = PBXGroup;
+			children = (
+				462671E81BF7ACA800468BD2 /* SphaudioMobileUITests.swift */,
+				462671EA1BF7ACA800468BD2 /* Info.plist */,
+			);
+			path = SphaudioMobileUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		462671C11BF7ACA700468BD2 /* SphaudioMobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462671ED1BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobile" */;
+			buildPhases = (
+				462671BE1BF7ACA700468BD2 /* Sources */,
+				462671BF1BF7ACA700468BD2 /* Frameworks */,
+				462671C01BF7ACA700468BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SphaudioMobile;
+			productName = SphaudioMobile;
+			productReference = 462671C21BF7ACA700468BD2 /* SphaudioMobile.app */;
+			productType = "com.apple.product-type.application";
+		};
+		462671D81BF7ACA800468BD2 /* SphaudioMobileTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462671F01BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobileTests" */;
+			buildPhases = (
+				462671D51BF7ACA800468BD2 /* Sources */,
+				462671D61BF7ACA800468BD2 /* Frameworks */,
+				462671D71BF7ACA800468BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				462671DB1BF7ACA800468BD2 /* PBXTargetDependency */,
+			);
+			name = SphaudioMobileTests;
+			productName = SphaudioMobileTests;
+			productReference = 462671D91BF7ACA800468BD2 /* SphaudioMobileTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		462671E31BF7ACA800468BD2 /* SphaudioMobileUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 462671F31BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobileUITests" */;
+			buildPhases = (
+				462671E01BF7ACA800468BD2 /* Sources */,
+				462671E11BF7ACA800468BD2 /* Frameworks */,
+				462671E21BF7ACA800468BD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				462671E61BF7ACA800468BD2 /* PBXTargetDependency */,
+			);
+			name = SphaudioMobileUITests;
+			productName = SphaudioMobileUITests;
+			productReference = 462671E41BF7ACA800468BD2 /* SphaudioMobileUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		462671BA1BF7ACA700468BD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Alex Harrison";
+				TargetAttributes = {
+					462671C11BF7ACA700468BD2 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					462671D81BF7ACA800468BD2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 462671C11BF7ACA700468BD2;
+					};
+					462671E31BF7ACA800468BD2 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 462671C11BF7ACA700468BD2;
+					};
+				};
+			};
+			buildConfigurationList = 462671BD1BF7ACA700468BD2 /* Build configuration list for PBXProject "SphaudioMobile" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 462671B91BF7ACA700468BD2;
+			productRefGroup = 462671C31BF7ACA700468BD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				462671C11BF7ACA700468BD2 /* SphaudioMobile */,
+				462671D81BF7ACA800468BD2 /* SphaudioMobileTests */,
+				462671E31BF7ACA800468BD2 /* SphaudioMobileUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		462671C01BF7ACA700468BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462671D31BF7ACA700468BD2 /* LaunchScreen.storyboard in Resources */,
+				462671D01BF7ACA700468BD2 /* Assets.xcassets in Resources */,
+				462671CB1BF7ACA700468BD2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462671D71BF7ACA800468BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462671E21BF7ACA800468BD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		462671BE1BF7ACA700468BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462671C81BF7ACA700468BD2 /* ViewController.swift in Sources */,
+				462671C61BF7ACA700468BD2 /* AppDelegate.swift in Sources */,
+				462671CE1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462671D51BF7ACA800468BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462671DE1BF7ACA800468BD2 /* SphaudioMobileTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		462671E01BF7ACA800468BD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				462671E91BF7ACA800468BD2 /* SphaudioMobileUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		462671DB1BF7ACA800468BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462671C11BF7ACA700468BD2 /* SphaudioMobile */;
+			targetProxy = 462671DA1BF7ACA800468BD2 /* PBXContainerItemProxy */;
+		};
+		462671E61BF7ACA800468BD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 462671C11BF7ACA700468BD2 /* SphaudioMobile */;
+			targetProxy = 462671E51BF7ACA800468BD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		462671C91BF7ACA700468BD2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462671CA1BF7ACA700468BD2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		462671D11BF7ACA700468BD2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				462671D21BF7ACA700468BD2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		462671EB1BF7ACA800468BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		462671EC1BF7ACA800468BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		462671EE1BF7ACA800468BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SphaudioMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexkendall.SphaudioMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		462671EF1BF7ACA800468BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SphaudioMobile/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexkendall.SphaudioMobile;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		462671F11BF7ACA800468BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SphaudioMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexkendall.SphaudioMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SphaudioMobile.app/SphaudioMobile";
+			};
+			name = Debug;
+		};
+		462671F21BF7ACA800468BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SphaudioMobileTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexkendall.SphaudioMobileTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SphaudioMobile.app/SphaudioMobile";
+			};
+			name = Release;
+		};
+		462671F41BF7ACA800468BD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SphaudioMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexkendall.SphaudioMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SphaudioMobile;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		462671F51BF7ACA800468BD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SphaudioMobileUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexkendall.SphaudioMobileUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SphaudioMobile;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		462671BD1BF7ACA700468BD2 /* Build configuration list for PBXProject "SphaudioMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462671EB1BF7ACA800468BD2 /* Debug */,
+				462671EC1BF7ACA800468BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		462671ED1BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462671EE1BF7ACA800468BD2 /* Debug */,
+				462671EF1BF7ACA800468BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		462671F01BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobileTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462671F11BF7ACA800468BD2 /* Debug */,
+				462671F21BF7ACA800468BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		462671F31BF7ACA800468BD2 /* Build configuration list for PBXNativeTarget "SphaudioMobileUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				462671F41BF7ACA800468BD2 /* Debug */,
+				462671F51BF7ACA800468BD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		462671CC1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				462671CD1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodel */,
+			);
+			currentVersion = 462671CD1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodel */;
+			path = SphaudioMobile.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 462671BA1BF7ACA700468BD2 /* Project object */;
+}
