@@ -257,7 +257,9 @@ class MainController: UIViewController {
     {
         if(in_main)
         {
+            
             self.view.addSubview(song_controller.view);
+            song_controller.reset_state();
             in_main = false;
         }
         else
