@@ -16,6 +16,8 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     let margin:CGFloat = 80.0;
     var table_view:UITableView!;
     var media_items:[MPMediaItem]!;
+    var audio_player:MPMusicPlayerController = MPMusicPlayerController();
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -52,11 +54,25 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-         media_items = MPMediaQuery.songsQuery().items;
+        media_items = MPMediaQuery.songsQuery().items;
         return media_items!.count;
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-        print("selected row");
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let item = media_items[indexPath.row];
+        let mediaCollection = MPMediaItemCollection(items: [item]);
+        audio_player.setQueueWithItemCollection(mediaCollection);
+        audio_player.play();
+        
+        // set title and artist labels
+        let _title = item.title!;
+        let _artist = item.artist!;
+        main_controller.set_artist(_artist);
+        main_controller.set_title(_title);
     }
 }
+
+
+
+
+

@@ -223,6 +223,16 @@ class MainController: UIViewController {
         SCNTransaction.commit();
     }
     
+    func set_artist(artist:String)
+    {
+        artist_label.text = artist;
+    }
+    
+    func set_title(title:String)
+    {
+        song_label.text = title;
+    }
+    
     func play()
     {
         print("playing song");
