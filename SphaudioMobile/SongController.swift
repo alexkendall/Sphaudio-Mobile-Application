@@ -149,14 +149,15 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         // search for songs with text specified in search
         
         queried_items = [MPMediaItem]();
-        let search_text = searchBar.text;
         for(var i = 0; i < media_items.count; ++i)
         {
-            let title = media_items[i].title;
-            let artist = media_items[i].artist;
+            // convert all search fields to lowercase
+            let title = media_items[i].title!.lowercaseString;
+            let artist = media_items[i].artist!.lowercaseString;
+            let search_text = searchBar.text!.lowercaseString;
             
-            // check if song title or artist comes up in query
-            if((title?.rangeOfString(search_text!) != nil) || (artist?.rangeOfString(search_text!) != nil))
+            // check if song title or artist comes up in query, if does add to result set
+            if((title.rangeOfString(search_text) != nil) || (artist.rangeOfString(search_text) != nil))
             {
                 queried_items.append(media_items[i]);
             }

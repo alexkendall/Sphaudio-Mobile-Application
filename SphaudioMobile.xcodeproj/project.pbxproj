@@ -22,6 +22,7 @@
 		462672001BF7B6E100468BD2 /* HamburgerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */; };
 		462672021BF7BA9800468BD2 /* SongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462672011BF7BA9800468BD2 /* SongController.swift */; };
 		462672051BF7C84800468BD2 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 462672041BF7C84800468BD2 /* Color.swift */; };
+		4665E7601BF936D40032A3B7 /* EncodeAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4665E75F1BF936D40032A3B7 /* EncodeAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HamburgerButton.swift; sourceTree = "<group>"; };
 		462672011BF7BA9800468BD2 /* SongController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongController.swift; sourceTree = "<group>"; };
 		462672041BF7C84800468BD2 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		4665E75F1BF936D40032A3B7 /* EncodeAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodeAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				462671F91BF7AD1600468BD2 /* AudioButton.swift */,
 				462671FF1BF7B6E100468BD2 /* HamburgerButton.swift */,
 				462672041BF7C84800468BD2 /* Color.swift */,
+				4665E75E1BF936B70032A3B7 /* Encode */,
 				462672031BF7BAB000468BD2 /* ViewControllers */,
 			);
 			name = AudioButtons;
@@ -163,6 +166,14 @@
 				462672011BF7BA9800468BD2 /* SongController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4665E75E1BF936B70032A3B7 /* Encode */ = {
+			isa = PBXGroup;
+			children = (
+				4665E75F1BF936D40032A3B7 /* EncodeAudio.swift */,
+			);
+			name = Encode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 				462671FA1BF7AD1600468BD2 /* NextButton.swift in Sources */,
 				462671FB1BF7AD1600468BD2 /* PrevButton.swift in Sources */,
 				462671CE1BF7ACA700468BD2 /* SphaudioMobile.xcdatamodeld in Sources */,
+				4665E7601BF936D40032A3B7 /* EncodeAudio.swift in Sources */,
 				462671FC1BF7AD1600468BD2 /* PlayButton.swift in Sources */,
 				462671FD1BF7AD1600468BD2 /* AudioButton.swift in Sources */,
 			);
