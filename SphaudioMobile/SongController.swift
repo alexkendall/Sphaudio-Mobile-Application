@@ -16,8 +16,9 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     let margin:CGFloat = 80.0;
     var table_view:UITableView!;
     var media_items:[MPMediaItem]!;
-    var queried_items:[MPMediaItem]!;
+    var queried_refs:[Int] = [];
     var search_bar:UISearchBar!;
+    var song_index:Int = 0;
     
     
     var is_searching = false;
@@ -43,6 +44,9 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         table_view.backgroundColor = DARK_GRAY;
         super_view.addSubview(table_view);
         
+        // load libraries songs
+        media_items = MPMediaQuery.songsQuery().items;
+        play_button.audio_player.setQueueWithItemCollection(MPMediaItemCollection(items: media_items));
     }
     
     // TABLE VIEW DELEGATE IMPLEMENTATION BEGIN -------------------------------------------------------------
@@ -56,13 +60,14 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         // get song title
         if(is_searching)
         {
-            this_song = queried_items![indexPath.row].title;
+            let index = queried_refs[indexPath.row];
+            this_song = media_items![index].title;
         }
         else
         {
             this_song = media_items![indexPath.row].title;
         }
-       cell.textLabel?.text = this_song;
+        cell.textLabel?.text = this_song;
 
         if((indexPath.row % 2) == 0)
         {
@@ -77,54 +82,27 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if(!is_searching)
+        if(is_searching)
         {
-            media_items = MPMediaQuery.songsQuery().items;
-            return media_items!.count;
+            return queried_refs.count;
         }
         else
         {
-            print(queried_items.count);
-            return queried_items!.count;
+            return media_items.count;
         }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        var item:MPMediaItem!;
-        if(is_searching)
+        if(!is_searching)
         {
-            item = queried_items[indexPath.row];
+            song_index = indexPath.row;
         }
         else
         {
-            item = media_items[indexPath.row];
+            song_index = queried_refs[indexPath.row];
         }
-        
-        var play_queue:[MPMediaItem] = [item];
-        for(var i = 0; i < media_items.count; ++i)
-        {
-            if(media_items[i] != item)
-            {
-                play_queue.append(media_items[i]);
-                print(media_items[i].title);
-            }
-        }
-        
-        let mediaCollection = MPMediaItemCollection(items: play_queue);
-
-        play_button.audio_player.setQueueWithItemCollection(mediaCollection);
-        play_button.set_playing();
-        
-        
-        // set title and artist labels
-        let _title = item.title!;
-        let _artist = item.artist!;
-        main_controller.set_artist(_artist);
-        main_controller.set_title(_title);
-        
-        print(media_items.count);
-        print(play_queue.count);
+        play_current();
     }
     
      // TABLE VIEW DELEGATE IMPLEMENTATION END ----------------------------------------------------------------
@@ -161,10 +139,9 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         print("search button clicked");
+        queried_refs = [];
         
-        // search for songs with text specified in search
-        
-        queried_items = [MPMediaItem]();
+        // search for songs with text specified in search-> get there indices
         for(var i = 0; i < media_items.count; ++i)
         {
             
@@ -176,11 +153,11 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
             // check if song title or artist comes up in query, if does add to result set
             if((title.rangeOfString(search_text) != nil) || (artist.rangeOfString(search_text ) != nil))
             {
-                queried_items.append(media_items[i]);
+                queried_refs.append(i);
             }
         }
         // must have at least one song to switch data source to queried songs
-        if(queried_items.count > 0)
+        if(queried_refs.count > 0)
         {
             is_searching = true;
         }
@@ -203,70 +180,54 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         is_searching = false;
         search_bar.text = "";
         table_view.reloadData();
-        
     }
-    
     
     func play_prev()
     {
         print("playing previous");
-        
-        // pop current song from front and add to back of queue
         if(media_items.count > 0)
         {
-            let item = media_items.last;
-            if(item != nil)
+            if(song_index == 0)
             {
-                media_items.removeLast();
-                var new_array = [item!];
-                
-                for(var i = 0; i < media_items.count; ++i)
-                {
-                    new_array.append(media_items[i]);
-                }
-                
-                let new_collection = MPMediaItemCollection(items: new_array);
-                play_button.audio_player.setQueueWithItemCollection(new_collection);
-                play_button.audio_player.play();
-                
-                let prev_song = play_button.audio_player.nowPlayingItem as MPMediaItem!;
-                main_controller.set_title(prev_song.title!);
-                main_controller.set_artist(prev_song.artist!);
-                
-                // set state of play button to playing
-                play_button.set_playing();
+                song_index = media_items.count - 1;
             }
+            else
+            {
+                --song_index;
+            }
+            
+            play_current();
         }
+        print("song index = " + String(song_index));
     }
     
     func play_next()
     {
         print("playing next");
-        
-        // pop current song from front and add to back of queue
         if(media_items.count > 0)
         {
-            let item = media_items.first;
-            if(item != nil)
+            if(song_index == (media_items.count - 1))
             {
-                media_items.removeFirst();
-                media_items.append(item!);
-                
-                let new_collection = MPMediaItemCollection(items: media_items);
-                play_button.audio_player.setQueueWithItemCollection(new_collection);
-                play_button.audio_player.play();
-                
-                let next_song = play_button.audio_player.nowPlayingItem as MPMediaItem!;
-                main_controller.set_title(next_song.title!);
-                main_controller.set_artist(next_song.artist!);
-                
-                // set state of play button to playing
-                play_button.set_playing();
-   
+                song_index = 0;
             }
+            else
+            {
+                ++song_index;
+            }
+            print("song index = " + String(song_index));
+            
+            play_current();
         }
     }
     
+    func play_current()
+    {
+        let item = media_items[song_index];
+        main_controller.set_artist(item.artist!);
+        main_controller.set_title(item.title!);
+        play_button.audio_player.setQueueWithItemCollection(MPMediaItemCollection(items: [item]));
+        play_button.audio_player.play();
+        play_button.set_playing();
+    }
     
 }
-

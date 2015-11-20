@@ -25,6 +25,7 @@ var song_label:UILabel!;
 var artist_label:UILabel!;
 var in_main:Bool = true;
 
+
 class MainController: UIViewController {
     
     var super_view:UIView!;
@@ -258,7 +259,7 @@ class MainController: UIViewController {
         {
             
             self.view.addSubview(song_controller.view);
-            song_controller.reset_state();
+            //song_controller.reset_state();
             in_main = false;
         }
         else
