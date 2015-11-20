@@ -18,13 +18,12 @@ var fall_button:UIButton!;
 var t_val:Float = 0.0;
 var num_rows = 5;
 var num_cols = 5;
-var play_button:PlayButton!;
+var play_button:PlayButton = PlayButton();
 var prev_button:PrevButton!;
 var next_button:NextButton!;
 var song_label:UILabel!;
 var artist_label:UILabel!;
 var in_main:Bool = true;
-
 
 class MainController: UIViewController {
     

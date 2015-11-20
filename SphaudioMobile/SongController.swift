@@ -17,8 +17,8 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     var table_view:UITableView!;
     var media_items:[MPMediaItem]!;
     var queried_items:[MPMediaItem]!;
-    var audio_player:MPMusicPlayerController = MPMusicPlayerController();
     var search_bar:UISearchBar!;
+    
     
     var is_searching = false;
     override func viewDidLoad() {
@@ -27,7 +27,6 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         super_view = self.view;
         super_view.frame = CGRect(x: 0.0, y: margin, width: super_view.bounds.width, height: super_view.bounds.height - margin);
         super_view.backgroundColor = UIColor.blackColor();
-        
         
         // configure search bar
         let search_width:CGFloat = super_view.bounds.width;
@@ -43,6 +42,7 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         table_view.separatorStyle = UITableViewCellSeparatorStyle.None;
         table_view.backgroundColor = DARK_GRAY;
         super_view.addSubview(table_view);
+        
     }
     
     // TABLE VIEW DELEGATE IMPLEMENTATION BEGIN -------------------------------------------------------------
@@ -100,15 +100,31 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         {
             item = media_items[indexPath.row];
         }
-        let mediaCollection = MPMediaItemCollection(items: [item]);
-        audio_player.setQueueWithItemCollection(mediaCollection);
-        audio_player.play();
+        
+        var play_queue:[MPMediaItem] = [item];
+        for(var i = 0; i < media_items.count; ++i)
+        {
+            if(media_items[i] != item)
+            {
+                play_queue.append(media_items[i]);
+                print(media_items[i].title);
+            }
+        }
+        
+        let mediaCollection = MPMediaItemCollection(items: play_queue);
+
+        play_button.audio_player.setQueueWithItemCollection(mediaCollection);
+        play_button.set_playing();
+        
         
         // set title and artist labels
         let _title = item.title!;
         let _artist = item.artist!;
         main_controller.set_artist(_artist);
         main_controller.set_title(_title);
+        
+        print(media_items.count);
+        print(play_queue.count);
     }
     
      // TABLE VIEW DELEGATE IMPLEMENTATION END ----------------------------------------------------------------
@@ -151,13 +167,14 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         queried_items = [MPMediaItem]();
         for(var i = 0; i < media_items.count; ++i)
         {
+            
             // convert all search fields to lowercase
             let title = media_items[i].title!.lowercaseString;
             let artist = media_items[i].artist!.lowercaseString;
             let search_text = searchBar.text!.lowercaseString;
             
             // check if song title or artist comes up in query, if does add to result set
-            if((title.rangeOfString(search_text) != nil) || (artist.rangeOfString(search_text) != nil))
+            if((title.rangeOfString(search_text) != nil) || (artist.rangeOfString(search_text ) != nil))
             {
                 queried_items.append(media_items[i]);
             }
@@ -176,7 +193,6 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
     }
     
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
-        print("should end editing");
         return true;
     }
     
@@ -189,9 +205,68 @@ class SongController:UIViewController, UITableViewDataSource, UITableViewDelegat
         table_view.reloadData();
         
     }
+    
+    
+    func play_prev()
+    {
+        print("playing previous");
+        
+        // pop current song from front and add to back of queue
+        if(media_items.count > 0)
+        {
+            let item = media_items.last;
+            if(item != nil)
+            {
+                media_items.removeLast();
+                var new_array = [item!];
+                
+                for(var i = 0; i < media_items.count; ++i)
+                {
+                    new_array.append(media_items[i]);
+                }
+                
+                let new_collection = MPMediaItemCollection(items: new_array);
+                play_button.audio_player.setQueueWithItemCollection(new_collection);
+                play_button.audio_player.play();
+                
+                let prev_song = play_button.audio_player.nowPlayingItem as MPMediaItem!;
+                main_controller.set_title(prev_song.title!);
+                main_controller.set_artist(prev_song.artist!);
+                
+                // set state of play button to playing
+                play_button.set_playing();
+            }
+        }
+    }
+    
+    func play_next()
+    {
+        print("playing next");
+        
+        // pop current song from front and add to back of queue
+        if(media_items.count > 0)
+        {
+            let item = media_items.first;
+            if(item != nil)
+            {
+                media_items.removeFirst();
+                media_items.append(item!);
+                
+                let new_collection = MPMediaItemCollection(items: media_items);
+                play_button.audio_player.setQueueWithItemCollection(new_collection);
+                play_button.audio_player.play();
+                
+                let next_song = play_button.audio_player.nowPlayingItem as MPMediaItem!;
+                main_controller.set_title(next_song.title!);
+                main_controller.set_artist(next_song.artist!);
+                
+                // set state of play button to playing
+                play_button.set_playing();
+   
+            }
+        }
+    }
+    
+    
 }
-
-
-
-
 

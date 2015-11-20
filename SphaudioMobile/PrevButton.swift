@@ -31,7 +31,7 @@ class PrevButton:UIButton
         path.addLineToPoint(CGPoint(x: rect.origin.x + (rect.width * 0.5) , y: rect.origin.y + (rect.height * 0.5)));
         path.fill();
         
-        self.addTarget(main_controller, action: "prev", forControlEvents: UIControlEvents.TouchUpInside);
+        self.addTarget(song_controller, action: "play_prev", forControlEvents: UIControlEvents.TouchUpInside);
     }
     
     override init(frame: CGRect) {
